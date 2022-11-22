@@ -1,6 +1,8 @@
 package Cake;
 
-public abstract class Cake {
+import Interfaces.ISell;
+
+public abstract class Cake implements ISell {
 
     protected String name;
     protected String baseFlavour;
@@ -12,6 +14,9 @@ public abstract class Cake {
         this.calories = calories;
     }
 
+    // METHODS
+    public abstract String bake();
+
     // Getters and setters
 
     public String getName() {
@@ -20,6 +25,10 @@ public abstract class Cake {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String scanBarcode(int price) {
+        return this.name + " costs £" +price;
     }
 
     public String getBaseFlavour() {

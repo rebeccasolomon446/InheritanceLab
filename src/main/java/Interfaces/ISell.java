@@ -1,2 +1,6 @@
-package Interfaces;public interface ISell {
+package Interfaces;
+
+public interface ISell {
+
+    String scanBarcode(int price);
 }
